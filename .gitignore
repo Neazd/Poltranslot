@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-wheel-metadata/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# VS Code
+.vscode/
+
+# IDEs and editors
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# System files
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+# Custom directories
+resources/styles/
+
+# Custom files
+resources/images/translation-image.jpeg
+
+# Environment files
+environment.yml
+
+# Ignore other unimportant files
