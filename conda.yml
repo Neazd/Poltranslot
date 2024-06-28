@@ -1,0 +1,8 @@
+name: suml
+dependencies:
+  - streamlit
+  - tensorflow
+  - transformers
+  - sentencepiece
+  - sacremoses
+  - scikit-learn

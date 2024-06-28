@@ -67,10 +67,8 @@ Thumbs.db
 # Custom directories
 resources/styles/
 
-# Custom files
-resources/images/translation-image.jpeg
+# C
 
-# Environment files
-environment.yml
+
 
 # Ignore other unimportant files
