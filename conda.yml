@@ -1,5 +1,6 @@
 name: suml
 dependencies:
+  - python=3.8
   - streamlit
   - tensorflow
   - transformers
