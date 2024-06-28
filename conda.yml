@@ -1,6 +1,5 @@
-name: suml
+name: pja-suml-streamlit
 dependencies:
-  - python=3.8
   - streamlit
   - tensorflow
   - transformers
