@@ -1,8 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 
-# Sentiment analysis of the text
-if option == "Sentiment analysis of text (eng)":
+def sentiment_analysis_app():
     text = st.text_area("Enter the text")
     if text:
         with st.spinner("Analyzing sentiment..."):
@@ -12,6 +11,3 @@ if option == "Sentiment analysis of text (eng)":
                 st.write("Sentiment analysis result:", answer)
             except Exception as e:
                 st.error(f"An error occurred during sentiment analysis: {e}")
-
-st.divider()
-st.write('Created by s2165')

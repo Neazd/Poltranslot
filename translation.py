@@ -1,15 +1,34 @@
 import streamlit as st
-from transformers import pipeline
+import tensorflow as tf  # Import TensorFlow first
+
+st.title('Polyglot')
+st.divider()
+st.image('sprechen_sie_deutsch.jpg')
+
+st.write('''
+Polyglot is designed to bridge language barriers and uncover the underlying emotions in texts.
+
+- **Text Translation**: Instantly convert English sentences into German with state-of-the-art accuracy.
+- **Sentiment Analysis**: Uncover the emotional tone of English texts, from joyful to sorrowful, with a single click.
+''')
+
+st.divider()
+
+option = st.selectbox(
+    "Options",
+    [
+        "Text translation from English to German",
+        "Sentiment analysis of text (eng)",
+    ]
+)
 
 if option == "Text translation from English to German":
-    text = st.text_area("Enter the text in English", max_chars=500)
-    if text:
-        with st.spinner("Translating..."):
-            try:
-                translator = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de")
-                translation = translator(text)
-                st.write('Translation to German:')
-                st.text(translation[0]['translation_text'])
-                st.balloons()
-            except Exception as e:
-                st.error(f"An error occurred during translation: {e}")
+    from translation import translation_app
+    translation_app()
+
+if option == "Sentiment analysis of text (eng)":
+    from sentiment_analysis import sentiment_analysis_app
+    sentiment_analysis_app()
+
+st.divider()
+st.write('Created by s2165')

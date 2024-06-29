@@ -1,10 +1,9 @@
 import streamlit as st
 import tensorflow as tf  # Import TensorFlow first
-from transformers import pipeline
 
 st.title('Polyglot')
 st.divider()
-st.image('translate.jpg')
+st.image('sprechen_sie_deutsch.jpg')
 
 st.write('''
 Polyglot is designed to bridge language barriers and uncover the underlying emotions in texts.
@@ -22,3 +21,14 @@ option = st.selectbox(
         "Sentiment analysis of text (eng)",
     ]
 )
+
+if option == "Text translation from English to German":
+    from translation import translation_app
+    translation_app()
+
+if option == "Sentiment analysis of text (eng)":
+    from sentiment_analysis import sentiment_analysis_app
+    sentiment_analysis_app()
+
+st.divider()
+st.write('Created by s2165')
