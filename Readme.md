@@ -1,102 +1,101 @@
-# Poltranslot
+# Polyglot Streamlit Application
 
-Poltranslot is a Streamlit application designed to bridge language barriers and uncover the underlying emotions in texts. It provides functionalities for text translation from English to German and sentiment analysis of English texts.
+Polyglot is a Streamlit-based application designed to bridge language barriers and uncover the underlying emotions in texts. This application provides functionalities for text translation from English to German and sentiment analysis of English texts.
 
 ## Features
 
 * **Text Translation**: Instantly convert English sentences into German with state-of-the-art accuracy.
 * **Sentiment Analysis**: Uncover the emotional tone of English texts, from joyful to sorrowful, with a single click.
 
-## Installation
+## File Structure
+
+* `polyglot_intro.py`: Introduction and options selection for the application.
+* `translation.py`: Handles the text translation from English to German.
+* `sentiment_analysis.py`: Handles the sentiment analysis of English text.
+* `translate.jpg`: Image used in the application.
+
+## Setup and Installation
+
+### Prerequisites
+
+* Docker installed on your machine.
+
+### Build the Docker Image
 
 
+1. Clone the repository:
 
-
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/neazd/poltranslot.git
-   cd poltranslot
+   ```sh
+   git clone <repository-url>
+   cd <repository-directory>
    ```
-2. **Set up a virtual environment:**
-   Using `conda`:
+2. Build the Docker image:
 
-   ```bash
-   conda create --name poltranslot python=3.9
-   conda activate poltranslot
+   ```sh
+   docker build -t polyglot-app .
    ```
-3. **Install the dependencies:**
-   Using `conda`:
 
-   ```bash
+### Run the Docker Container
+
+
+1. Run the Docker container:
+
+   ```sh
+   docker run -p 8501:8501 polyglot-app
+   ```
+2. Open your web browser and navigate to `http://localhost:8501` to access the Polyglot application.
+
+## Running the Application in Docker
+
+To run the application using Docker, follow these steps:
+
+
+1. Ensure Docker is installed on your machine.
+2. Clone the repository and navigate into the directory:
+
+   ```sh
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+3. Build the Docker image:
+
+   ```sh
+   docker build -t polyglot-app .
+   ```
+4. Run the Docker container:
+
+   ```sh
+   docker run -p 8501:8501 polyglot-app
+   ```
+5. Open your web browser and go to `http://localhost:8501` to access the application.
+
+## Development
+
+If you want to contribute to the project or make modifications, follow these steps:
+
+
+1. Ensure you have Conda installed.
+2. Create the Conda environment:
+
+   ```sh
    conda env create -f environment.yml
-   conda activate poltranslot
    ```
+3. Activate the environment:
 
-Usage
-
-
-
-
-
-1. **Run the Streamlit application:**
-
-   ```bash
-   streamlit run main.py
+   ```sh
+   conda activate suml4
    ```
-2. Open your web browser and navigate to `http://localhost:8501` to view the application.
+4. Install additional dependencies:
 
-## Project Structure
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Run the application locally:
 
-```
-poltranslot/
-│
-├── app/
-│   ├── __init__.py
-│   ├── main.py         # Main Streamlit application file
-│   ├── translation.py  # Functions related to translation
-│   └── sentiment.py    # Functions related to sentiment analysis
-│
-├── resources/
-│   ├── images/
-│   │  └── translation-image.jpeg  # Image used in the application
-|
-├── .gitignore
-├── README.md
-└── environment.yml
-```
-
-## Customization
-
-### Adding Custom Fonts
-
-To add custom fonts, update the `styles.css` file located in the `resources/styles/` directory and link it in the `main.py` file:
-
-```html
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./resources/styles/styles.css">
-</head>
-```
-
-## Dependencies
-
-* Streamlit
-* Transformers
-* TensorFlow or PyTorch (Choose one compatible with your setup)
-* SentencePiece
+   ```sh
+   streamlit run polyglot_intro.py
+   ```
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-* [Streamlit](https://streamlit.io/)
-* [Hugging Face Transformers](https://huggingface.co/transformers/)
-* [TensorFlow](https://www.tensorflow.org/) / [PyTorch](https://pytorch.org/)
-
-
+This project is licensed under the MIT License.
