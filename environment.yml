@@ -1,0 +1,15 @@
+name: suml4
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - streamlit
+  - typing-extensions=4.5.0
+  - pip
+  - pip:
+    - tensorflow==2.13.0
+    - keras==2.13.1
+    - tensorboard==2.13.0
+    - tensorflow-estimator==2.13.0
+    - transformers==4.28.0

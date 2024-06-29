@@ -1,8 +1,0 @@
-name: pja-suml-streamlit
-dependencies:
-  - streamlit
-  - tensorflow
-  - transformers
-  - sentencepiece
-  - sacremoses
-  - scikit-learn
