@@ -50,4 +50,4 @@ if option == "Sentiment analysis of text (eng)":
                 st.error(f"An error occurred during sentiment analysis: {e}")
 
 st.divider()
-st.wr
+st.write('Created by s2165')
