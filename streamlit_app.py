@@ -1,4 +1,5 @@
 import streamlit as st
+import tensorflow as tf  # Import TensorFlow first
 from transformers import pipeline
 
 st.title('Polyglot')
@@ -28,7 +29,7 @@ if option == "Text translation from English to German":
     if text:
         with st.spinner("Translating..."):
             try:
-                translator = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de")
+                translator = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de", framework="pt")
                 translation = translator(text)
                 st.write('Translation to German:')
                 st.text(translation[0]['translation_text'])
@@ -42,11 +43,11 @@ if option == "Sentiment analysis of text (eng)":
     if text:
         with st.spinner("Analyzing sentiment..."):
             try:
-                classifier = pipeline("sentiment-analysis")
+                classifier = pipeline("sentiment-analysis", framework="pt")
                 answer = classifier(text)
                 st.write("Sentiment analysis result:", answer)
             except Exception as e:
                 st.error(f"An error occurred during sentiment analysis: {e}")
 
 st.divider()
-st.write('Created by s22000')
+st.write('Created by s21651')
