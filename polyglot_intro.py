@@ -3,7 +3,7 @@ import tensorflow as tf  # Import TensorFlow first
 
 st.title('Polyglot')
 st.divider()
-st.image('sprechen_sie_deutsch.jpg')
+st.image('translate.jpg')
 
 st.write('''
 Polyglot is designed to bridge language barriers and uncover the underlying emotions in texts.
